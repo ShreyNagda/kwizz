@@ -1,5 +1,5 @@
 # Kwizz
-Kwizz is an interactive quiz application that allows users to test their knowledge across various categories and difficulty levels. The app fetches trivia questions from the Open Trivia Database [OpenTDB](https://opentdb.com/) and calculates the score at the end of each game. Live demo can be viewed [here](https://kwizz-trivia.netlify.app)
+Kwizz is an interactive quiz application that allows users to test their knowledge across various categories and difficulty levels. The app fetches trivia questions from the Open Trivia Database [OpenTDB](https://opentdb.com/) and calculates the score at the end of each game. Live demo can be viewed [here](https://kwizz-trivia.netlify.app).
 
 ## Features
 Customizable Quizzes: Select the difficulty, category, and number of questions for each quiz.
