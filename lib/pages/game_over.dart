@@ -54,74 +54,78 @@ class _GameOverState extends State<GameOver> {
                 "Game Over",
                 style: Theme.of(context).textTheme.headlineMedium,
               ),
-              const SizedBox(height: 20),
+              Text("Your Score: $score"),
+              const SizedBox(height: 10),
+              ElevatedButton(onPressed: () {}, child: const Text("Play Again")),
+              const SizedBox(height: 10),
               Expanded(
-                  child: ListView.builder(
-                      itemCount: questions.length,
-                      itemBuilder: (context, index) {
-                        return Column(
-                          children: [
-                            Text(
-                              "${index + 1}. ${questions[index].question}",
-                              textAlign: TextAlign.center,
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .titleMedium
-                                  ?.copyWith(
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                            ),
-                            const SizedBox(
-                              height: 30,
-                            ),
-                            SizedBox(
-                              height: 300,
-                              child: GridView(
-                                gridDelegate:
-                                    SliverGridDelegateWithFixedCrossAxisCount(
-                                  crossAxisSpacing: 10,
-                                  mainAxisSpacing: 10,
-                                  crossAxisCount:
-                                      MediaQuery.of(context).size.width > 500
-                                          ? 2
-                                          : 1,
-                                  childAspectRatio:
-                                      MediaQuery.of(context).size.width > 426
-                                          ? 50 / 12.5
-                                          : 50 / 10,
+                child: ListView.builder(
+                    padding: const EdgeInsets.all(10),
+                    itemCount: questions.length,
+                    itemBuilder: (context, index) {
+                      return Column(
+                        children: [
+                          Text(
+                            "${index + 1}. ${questions[index].question}",
+                            textAlign: TextAlign.center,
+                            style: Theme.of(context)
+                                .textTheme
+                                .titleMedium
+                                ?.copyWith(
+                                  fontWeight: FontWeight.bold,
                                 ),
-                                children: questions[index]
-                                    .options
-                                    .map((option) => Container(
-                                          decoration: BoxDecoration(
-                                              color: option ==
-                                                      questions[index]
-                                                          .correct_answer
-                                                  ? Colors.greenAccent
-                                                  : option ==
-                                                          selectedOptions[index]
-                                                      ? Colors.red
-                                                      : Provider.of<ThemeProvider>(
-                                                                  context)
-                                                              .isDarkMode
-                                                          ? Colors.white12
-                                                          : Colors
-                                                              .grey.shade300,
-                                              borderRadius:
-                                                  BorderRadius.circular(10)),
-                                          child: Center(
-                                            child: Text(
-                                              option,
-                                              textAlign: TextAlign.center,
-                                            ),
-                                          ),
-                                        ))
-                                    .toList(),
+                          ),
+                          const SizedBox(
+                            height: 30,
+                          ),
+                          SizedBox(
+                            height: 300,
+                            child: GridView(
+                              gridDelegate:
+                                  SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisSpacing: 10,
+                                mainAxisSpacing: 10,
+                                crossAxisCount:
+                                    MediaQuery.of(context).size.width > 500
+                                        ? 2
+                                        : 1,
+                                childAspectRatio:
+                                    MediaQuery.of(context).size.width > 426
+                                        ? 50 / 12.5
+                                        : 50 / 10,
                               ),
-                            )
-                          ],
-                        );
-                      }))
+                              children: questions[index]
+                                  .options
+                                  .map((option) => Container(
+                                        decoration: BoxDecoration(
+                                            color: option ==
+                                                    questions[index]
+                                                        .correct_answer
+                                                ? Colors.greenAccent
+                                                : option ==
+                                                        selectedOptions[index]
+                                                    ? Colors.red
+                                                    : Provider.of<ThemeProvider>(
+                                                                context)
+                                                            .isDarkMode
+                                                        ? Colors.white12
+                                                        : Colors.grey.shade300,
+                                            borderRadius:
+                                                BorderRadius.circular(10)),
+                                        child: Center(
+                                          child: Text(
+                                            option,
+                                            textAlign: TextAlign.center,
+                                          ),
+                                        ),
+                                      ))
+                                  .toList(),
+                            ),
+                          )
+                        ],
+                      );
+                    }),
+              ),
             ],
           ),
         ),

@@ -107,15 +107,16 @@ class _QuizState extends State<Quiz> {
                         currentQuestion!.question,
                         style: Theme.of(context)
                             .textTheme
-                            .headlineSmall
+                            .titleLarge
                             ?.copyWith(fontWeight: FontWeight.bold),
                         textAlign: TextAlign.center,
                       ),
                       const SizedBox(height: 10),
                       const SizedBox(height: 10),
                       SizedBox(
-                        height: 350,
+                        height: 300,
                         child: GridView.builder(
+                          physics: const NeverScrollableScrollPhysics(),
                           shrinkWrap: true,
                           itemCount: currentQuestion!.options.length,
                           gridDelegate:
@@ -151,6 +152,7 @@ class _QuizState extends State<Quiz> {
                           },
                         ),
                       ),
+                      const Spacer(),
                     ],
                   ),
                 ),
