@@ -2,10 +2,10 @@
 Kwizz is an interactive quiz application that allows users to test their knowledge across various categories and difficulty levels. The app fetches trivia questions from the Open Trivia Database [OpenTDB](https://opentdb.com/) and calculates the score at the end of each game. Live demo can be viewed [here](https://kwizz-trivia.netlify.app).
 
 ## Features
-Customizable Quizzes: Select the difficulty, category, and number of questions for each quiz.
-Wide Range of Categories: Explore trivia questions from multiple categories such as General Knowledge, Science, History, Entertainment, and more.
-Real-Time Score Calculation: Get your score immediately after completing the quiz to see how well you did.
-User-Friendly Interface: Enjoy a seamless and intuitive quiz experience with a clean and simple design.
+1. Customizable Quizzes: Select the difficulty, category, and number of questions for each quiz.
+2. Wide Range of Categories: Explore trivia questions from multiple categories such as General Knowledge, Science, History, Entertainment, and more.
+3. Real-Time Score Calculation: Get your score immediately after completing the quiz to see how well you did.
+4. User-Friendly Interface: Enjoy a seamless and intuitive quiz experience with a clean and simple design.
 
 ## Contributing
 I welcome contributions to improve Kwizz! Here’s how you can help:
