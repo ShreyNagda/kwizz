@@ -23,7 +23,6 @@ class ThemeProvider extends ChangeNotifier {
       themeData = lightTheme;
       await prefs.setBool("dark", false);
     }
-    print(prefs.getBool("dark"));
     notifyListeners();
   }
 }
