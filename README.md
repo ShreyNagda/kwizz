@@ -11,10 +11,10 @@ User-Friendly Interface: Enjoy a seamless and intuitive quiz experience with a c
 I welcome contributions to improve Kwizz! Here’s how you can help:
 
 ### Fork the repository.
-Create a new branch (git checkout -b feature/your-feature-name).
-Make your changes and commit them (git commit -m 'Add some feature').
-Push to the branch (git push origin feature/your-feature-name).
-Create a new Pull Request.
+- Create a new branch (git checkout -b feature/your-feature-name).
+- Make your changes and commit them (git commit -m 'Add some feature').
+- Push to the branch (git push origin feature/your-feature-name).
+- Create a new Pull Request.
 
 ## Acknowledgements
 Trivia questions provided by Open Trivia Database (OpenTDB).
